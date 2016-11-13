@@ -1,0 +1,115 @@
+﻿{% extends "home_layout.html" %} {% block content %}
+
+<div class="page-header">
+    <h1 class="text-center">asKcarl, your corporate finance assistant</h1>
+</div>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="text-center">We aim to simplify the way you calculate the cost of capital and provide you with trusted and documented results</h1>
+
+    </div>
+</div>
+
+<div class="page-header">
+    <h1 class="text-center"><span class="label label-primary">Try it Now!</span></h1>
+</div>
+
+
+
+<div class="container-fluid">
+    <form role="form" method="post">
+        {% csrf_token %}
+        <label for="tagada">La première étiquette </label>
+        <div class="raw">
+            <div class="col-md-4">
+                <div class="btn-group">
+                    <select class="form-control" name="business_choice">
+                            <option value="Real Estate">Real Estate</option>
+                            <option value="Pharmaceutical">Pharmaceutical</option>
+                            <option value="Bank">Bank</option>
+                            <option value="Telecom">Telecom</option>
+                        </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="btn-group">
+                    <select class="form-control" name="geographic_choice">
+                            <option value="Toto">Toto</option>
+                            <option value="Titi">Titi</option>
+                            <option value="Tata">Tata</option>
+                        </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="btn-group">
+                    <select class="form-control" name="size_choice">
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
+                </div>
+            </div>
+
+        </div>
+
+        <label for="tagada">L'étiquette </label>
+        <div class="raw">
+            <div class="col-md-6">
+                <input type="radio" name="whichcost" value="Cost of Capital" checked> Cost of Capital<br>
+            </div>
+            <div class="col-md-6">
+                <input type="radio" name="whichcost" value="Weighted Cost of Capital"> Weighted Cost of Capital<br>
+            </div>
+        </div>
+        <label for="tagada">La dernière étiquette </label>
+        <button type="submit" class="btn btn-default" id="tagada">Submit</button>
+    </form>
+</div>
+
+
+<div class="container">
+    <div class="span8">
+
+        <div id="myCarousel" class="carousel slide" dataride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+
+                    <div class="carousel-caption">
+                        <h4>First Thumbnail label</h4>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                </div>
+                <div class="item">
+
+                    <div class="carousel-caption">
+                        <h4>Second Thumbnail label</h4>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                </div>
+                <div class="item">
+
+                    <div class="carousel-caption">
+                        <h4>Third Thumbnail label</h4>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" dataslide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
