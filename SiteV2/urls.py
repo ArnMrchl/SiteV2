@@ -20,5 +20,11 @@ from AskcarlApp import views # plus tard rajouter forms et auth
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^about/', views.about, name='about'),
+    url(r'^pricing/', views.pricing, name='pricing'),
+    url(r'^blog/', views.blog, name='blog'),
+    url(r'^datawarehouse_registered/', views.datawarehouse_registered, name='datawarehouse_registered'),
+    url(r'^datawarehouse_unregistered/', views.datawarehouse_unregistered, name='datawarehouse_unregistered'),
+
     url(r'^admin/', admin.site.urls),
 ]

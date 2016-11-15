@@ -72,7 +72,7 @@
                     </li>
                     {% endif %}
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+{% comment %}                <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
                     <li class="active"><a href="#">Account</a></li>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
@@ -83,7 +83,7 @@
                     <li><a href="/admin">Administration</a></li>
                     {% endif %}
                 </ul>
-            </div>
+{% endcomment %}            </div>
             <!--/.nav-collapse -->
         </div>
     </nav>

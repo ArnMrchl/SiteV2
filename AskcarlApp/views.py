@@ -12,3 +12,18 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 def home(request):
     return render(request, 'home.html')
+
+def about(request):
+    return render(request, 'home.html')
+
+def blog(request):
+    return render(request, 'home.html')
+
+def pricing(request):
+    return render(request, 'home.html')
+
+def datawarehouse_registered(request):
+    return render(request, 'home.html')
+
+def datawarehouse_unregistered(request):
+    return render(request, 'home.html')
