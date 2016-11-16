@@ -16,15 +16,25 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from AskcarlApp import views # plus tard rajouter forms et auth
+# Uncomment the next lines to enable the admin:
+# from django.conf.urls import include
+# from django.contrib import admin
+# admin.autodiscover()
+
+from AskcarlApp import views, auth # plus tard rajouter forms et auth
+
+
+
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'^about/', views.about, name='about'),
-    url(r'^pricing/', views.pricing, name='pricing'),
-    url(r'^blog/', views.blog, name='blog'),
-    url(r'^datawarehouse_registered/', views.datawarehouse_registered, name='datawarehouse_registered'),
-    url(r'^datawarehouse_unregistered/', views.datawarehouse_unregistered, name='datawarehouse_unregistered'),
-
+    url(r'^login/', auth.login, name = 'login'),
+	url(r'^logout/', auth.logout, name = 'logout'),
+	url(r'^register/', auth.register, name = 'register'),
+	url(r'^about/', views.about, name='about'),
+	url(r'^blog/', views.blog, name='blog'),
+	url(r'^datawarehouse_registered/', views.datawarehouse_registered, name='datawarehouse_registered'),
+	url(r'^datawarehouse_unregistered/', views.datawarehouse_unregistered, name='datawarehouse_unregistered'),
+	url(r'^pricing/', views.pricing, name='pricing'),
     url(r'^admin/', admin.site.urls),
 ]

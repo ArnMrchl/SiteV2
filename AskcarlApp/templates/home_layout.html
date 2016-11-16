@@ -13,13 +13,13 @@
     <title>asKcarl | estimate and document your cost of capital</title>
     <!-- Bootstrap core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <script src="../static/app/scripts/jquery-1.10.2.min.js"></script>
+    <script src="../static/AskcarlApp/scripts/jquery-1.10.2.min.js"></script>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     {#
     <link href="navbar-fixed-top.css" rel="stylesheet">#}
-    <link href="../static/app/content/sticky-footer-navbar.css" rel="stylesheet">
-    <link href="../static/app/content/carousel.css" rel="stylesheet">
+    <link href="../static/AskcarlApp/content/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="../static/AskcarlApp/content/carousel.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -72,7 +72,6 @@
                     </li>
                     {% endif %}
                 </ul>
-                {% comment %}
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
                     <li class="active"><a href="#">Account</a></li>
@@ -84,7 +83,7 @@
                     <li><a href="/admin">Administration</a></li>
                     {% endif %}
                 </ul>
-                {% endcomment %} </div>
+            </div>
             <!--/.nav-collapse -->
         </div>
     </nav>
@@ -112,7 +111,7 @@
     <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="../static/app/scripts/presentation-page/jquery.sharrre.js" type="text/javascript"></script>
+    <script src="../static/AskcarlApp/scripts/presentation-page/jquery.sharrre.js" type="text/javascript"></script>
     <script type="text/javascript">
         $('#twitter').sharrre({
             share: {
